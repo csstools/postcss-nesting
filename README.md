@@ -10,8 +10,9 @@
 a, b {
     color: red;
 
-    @nest c, d {
+    @nest & c, & d {
         color: white;
+    }
 
     @nest & & {
         color: blue;
