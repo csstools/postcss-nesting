@@ -3,5 +3,7 @@
 language: node_js
 node_js:
   - 4
+before_install:
+  - npm i -g npm@latest
 install:
-  - npm install --ignore-scripts
+ - npm ci
