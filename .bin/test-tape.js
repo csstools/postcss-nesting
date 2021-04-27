@@ -1,5 +1,5 @@
 import { strict as assert } from 'node:assert'
-import fs from 'node:fs/promises'
+import { promises as fs } from 'node:fs'
 import postcss from 'postcss'
 import process from 'node:process'
 
