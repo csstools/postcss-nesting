@@ -14,7 +14,8 @@ export default async function tape() {
 	failures += await test('supports at-rule usage', { basename: 'at-rule' })
 	failures += await test('supports direct usage', { basename: 'direct' })
 	failures += await test('removes empty rules', { basename: 'empty' })
-	failures += await test('supports nested media', { basename: 'media' })
+	failures += await test('supports nested @container', { basename: 'container' })
+	failures += await test('supports nested @media', { basename: 'media' })
 	failures += await test('ignores invalid entries', { basename: 'ignore' })
 	failures += await test('supports complex entries', { basename: 'complex' })
 
@@ -35,7 +36,7 @@ async function test(name, init) {
 	let resultCss = await postcss(plugins).process(sourceCss, { from: sourceCss, to: resultUrl }).css
 
 	try {
-		assert.equal(expectCss, resultCss)
+		assert.equal(resultCss, expectCss)
 
 		console.log(`\x1b[42m\x1b[30m PASS \x1b[0m`, name)
 

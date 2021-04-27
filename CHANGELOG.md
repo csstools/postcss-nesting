@@ -1,9 +1,10 @@
 # Changes to PostCSS Nesting
 
-### 8.0.0 (March 2, 2020)
+### 8.0.0 (April 26, 2021)
 
-- Updated: Support for PostCSS 8+
-- Updated: Support for Node v12+
+- Updated: Support for PostCSS 8+.
+- Updated: Support for Node v12+.
+- Updated: Support for the `@container` at-rule.
 
 ### 7.0.1 (July 29, 2018)
 
