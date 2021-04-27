@@ -1,11 +1,9 @@
-import { list } from 'postcss'
+import { comma } from './list.js'
 import shiftNodesBeforeParent from './shift-nodes-before-parent.js'
 import cleanupParent from './cleanup-parent.js'
 import mergeSelectors from './merge-selectors.js'
 import validSelector from './valid-selector.js'
 import walk from './walk.js'
-
-const { comma } = list
 
 export default function transformNestRuleWithinRule(node) {
 	// move previous siblings and the node to before the parent

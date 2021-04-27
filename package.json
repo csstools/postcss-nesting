@@ -16,7 +16,7 @@
   "repository": "csstools/postcss-nesting",
   "files": [
     "dist",
-    "types"
+    "postcss-7"
   ],
   "scripts": {
     "prepublishOnly": "npm test",

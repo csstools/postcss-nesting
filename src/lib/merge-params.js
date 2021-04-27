@@ -1,6 +1,4 @@
-import { list } from 'postcss'
-
-const { comma } = list
+import { comma } from './list.js'
 
 export default function mergeParams(fromParams, toParams) {
 	return comma(fromParams)
