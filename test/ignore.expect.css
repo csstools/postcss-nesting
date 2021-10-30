@@ -23,11 +23,9 @@ a, b {
 @nest & e {
 	order: 3;
 }
-f {
-	@nest &h {
-		order: 5;
-	}
-	@nest &|i {
-		order: 6;
-	}
+f:is(h) {
+		order: 5
+}
+f:is(|i) {
+		order: 6
 }

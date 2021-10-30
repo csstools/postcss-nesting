@@ -13,6 +13,13 @@ export default function mergeSelectors(fromSelectors, toSelectors) {
 			return `&:is(${p1})`
 		})
 
+		// foo& -> foo:is(&)
+		if (fromSelectors.length === 1 && /^(?:[\w-_|])/.test(fromSelectors[0])) {
+			toSelector = toSelector.replaceAll(/([\w-_|]+)(?:&)/g, (match, p1) => {
+				return `${p1}:is(&)`
+			})
+		}
+
 		return needsIsOnFromSelector
 				? toSelector.replace(replaceable, `:is(${fromSelectors.join(', ')})`)
 				: toSelector.replace(replaceable, fromSelectors.join(', '))
