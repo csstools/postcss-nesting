@@ -20,4 +20,4 @@ export default function transformRuleWithinRule(node) {
 	cleanupParent(parent)
 }
 
-export const isRuleWithinRule = (node) => node.type === 'rule' && Object(node.parent).type === 'rule' && node.selectors.every((selector) => selector.trim().indexOf('&') === 0)
+export const isRuleWithinRule = (node) => node.type === 'rule' && Object(node.parent).type === 'rule' && node.selectors.every((selector) => selector.trim().indexOf('&') === 0 && selector.indexOf('|') === -1)

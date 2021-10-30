@@ -24,4 +24,4 @@ export default function transformNestRuleWithinRule(node) {
 	walk(rule)
 }
 
-export const isNestRuleWithinRule = (node) => node.type === 'atrule' && node.name === 'nest' && Object(node.parent).type === 'rule' && comma(node.params).every((selector) => selector.split('&').length >= 2)
+export const isNestRuleWithinRule = (node) => node.type === 'atrule' && node.name === 'nest' && Object(node.parent).type === 'rule' && comma(node.params).every((selector) => selector.split('&').length >= 2 && selector.indexOf('|') === -1)

@@ -26,6 +26,8 @@ a, b {
 f:is(h) {
 		order: 5
 }
-f:is(|i) {
-		order: 6
+f {
+	@nest &|i {
+		order: 6;
+	}
 }
