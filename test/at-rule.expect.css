@@ -50,6 +50,10 @@ a e {
 		color: blue
 }
 
+.foo:is(h1) .baz h1 {
+		color: blue
+}
+
 .foo:is(h1), .bar:is(h1) {
 		color: blue
 }

@@ -61,6 +61,12 @@ h1 {
 }
 
 h1 {
+	@nest .foo& .baz & {
+		color: blue;
+	}
+}
+
+h1 {
 	@nest .foo&, .bar& {
 		color: blue;
 	}
