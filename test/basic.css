@@ -53,3 +53,9 @@ a {
 		color: red;
 	}
 }
+
+li {
+	&+& {
+		background: red;
+	}
+}

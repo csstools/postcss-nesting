@@ -68,3 +68,7 @@ a {
 	.foo:is(h2) {
 		color: red;
 	}
+
+li+li {
+		background: red;
+	}
