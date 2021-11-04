@@ -1,4 +1,5 @@
 node_modules
+dist
 postcss-7-nesting
 postcss-8-nesting
 package-lock.json
