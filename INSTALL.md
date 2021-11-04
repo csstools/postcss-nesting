@@ -1,9 +1,9 @@
 # Installing PostCSS Nesting
 
-[PostCSS Nesting] runs in all Node environments and Deno, with special instructions for:
+[PostCSS Nesting] runs in all Node environments, with special instructions for:
 
-| [Node](#node) | [PostCSS CLI](#postcss-cli) | [Webpack](#webpack) | [Create React App](#create-react-app) | [Gulp](#gulp) | [Grunt](#grunt) | [Deno](#deno) |
-| --- | --- | --- | --- | --- | --- | --- |
+| [Node](#node) | [PostCSS CLI](#postcss-cli) | [Webpack](#webpack) | [Create React App](#create-react-app) | [Gulp](#gulp) | [Grunt](#grunt) |
+| --- | --- | --- | --- | --- | --- |
 
 ## Node
 
@@ -160,17 +160,6 @@ grunt.initConfig({
 });
 ```
 
-## Deno
-
-You can also use [PostCSS Nesting] on [Deno]:
-
-```js
-import postcss from "https://deno.land/x/postcss/mod.js";
-import postcssNesting from "https://deno.land/x/postcss_nesting/mod.js";
-
-await postcss([postcssNesting]).process(YOUR_CSS /*, processOptions */);
-```
-
 [Gulp PostCSS]: https://github.com/postcss/gulp-postcss
 [Grunt PostCSS]: https://github.com/nDmitry/grunt-postcss
 [PostCSS]: https://github.com/postcss/postcss
@@ -179,4 +168,3 @@ await postcss([postcssNesting]).process(YOUR_CSS /*, processOptions */);
 [PostCSS Nesting]: https://github.com/jonathantneal/postcss-nesting
 [React App Rewire PostCSS]: https://github.com/csstools/react-app-rewire-postcss
 [React App Rewired]: https://github.com/timarney/react-app-rewired
-[Deno]: https://deno.land/x/postcss_nesting
