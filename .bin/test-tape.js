@@ -51,8 +51,6 @@ async function test(name, init, ...plugins) {
 	let expectCss = await fs.readFile(expectUrl, 'utf8')
 	let resultCss = await postcss(plugins).process(sourceCss, { from: sourceCss, to: resultUrl }).css
 
-	await fs.writeFile(expectUrl, resultCss)
-
 	try {
 		assert.equal(resultCss, expectCss)
 
