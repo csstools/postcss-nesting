@@ -65,6 +65,65 @@ postcss([
 Deno is no longer supported because this plugin has dependencies that can not work with Deno.
 
 
+## Options
+
+### allowDeclarationsAfterNestedRules
+
+The [specification](https://www.w3.org/TR/css-nesting-1/#mixing) does not allow declarations after nested rules.
+This was previously supported by this plugin and can be re-enabled with `allowDeclarationsAfterNestedRules`.
+
+Before :
+
+```css
+a {
+  color: red;
+
+  & b {
+    color: white;
+  }
+
+  padding: 20px;
+}
+```
+
+After **without** the option :
+
+```js
+postcssNesting()
+```
+
+```css
+a {
+  color: red;
+}
+
+a b {
+  color: white;
+}
+```
+
+After **with** the option :
+
+```js
+postcssNesting({
+  allowDeclarationsAfterNestedRules: true
+})
+```
+
+```css
+a {
+  color: red;
+}
+
+a b {
+  color: white;
+}
+
+a {
+  padding: 20px;
+}
+```
+
 [cli-img]: https://img.shields.io/travis/csstools/postcss-nesting.svg
 [cli-url]: https://travis-ci.org/csstools/postcss-nesting
 [css-img]: https://cssdb.org/badge/nesting-rules.svg
