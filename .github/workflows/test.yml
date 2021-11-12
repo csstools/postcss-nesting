@@ -16,3 +16,18 @@ jobs:
       - run: npm install --ignore-scripts
       - run: npm run build
       - run: npm run test
+
+  deno_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: npm install --ignore-scripts
+      - run: npm run build
+
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x.x
+      - run: npm run test:deno

@@ -30,7 +30,8 @@
     "build": "rollup -c .rollup.js",
     "test": "node .bin/test.js",
     "test:lint": "node .bin/test-lint.js",
-    "test:tape": "node .bin/test-tape.js"
+    "test:tape": "node .bin/test-tape.js",
+    "test:deno": "deno run --unstable --allow-env --allow-read .bin/test-deno.js"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
