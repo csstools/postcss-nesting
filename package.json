@@ -26,7 +26,7 @@
     "dist"
   ],
   "scripts": {
-    "prepublishOnly": "npm test",
+    "prepublishOnly": "npm run build && npm test",
     "build": "rollup -c .rollup.js",
     "test": "node .bin/test.js",
     "test:lint": "node .bin/test-lint.js",
