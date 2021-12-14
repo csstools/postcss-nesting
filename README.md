@@ -89,7 +89,7 @@ interfere with PostCSS' plugin nature such as with `@mixin`
 
 [CSS Nesting]: https://drafts.csswg.org/css-nesting-1/
 [PostCSS]: https://github.com/postcss/postcss
-[PostCSS Nesting]: https://github.com/jonathantneal/postcss-nesting
+[PostCSS Nesting]: https://github.com/csstools/postcss-nesting
 [Deno]: https://deno.land/x/postcss_nesting
 [PostCSS Nested]: https://github.com/postcss/postcss-nested
 [Sass]: https://sass-lang.com/
